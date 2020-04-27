@@ -1,0 +1,8 @@
+package single.console.chat;
+
+import java.net.Socket;
+
+public class ClientSenderThread implements Runnable{
+	Socket socket = null;
+
+}

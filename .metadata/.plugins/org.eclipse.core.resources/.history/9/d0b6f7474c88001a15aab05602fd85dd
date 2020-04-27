@@ -1,0 +1,9 @@
+package single.console.chat;
+
+public class ServerSenderThread implements Runnable{
+	
+	@Override
+	public void run() {
+		
+	}
+}

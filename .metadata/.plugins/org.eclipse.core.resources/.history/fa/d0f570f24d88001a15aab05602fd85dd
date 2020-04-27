@@ -1,0 +1,5 @@
+package single.console.chat;
+
+public class ClientSenderThread {
+
+}

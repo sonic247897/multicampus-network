@@ -1,0 +1,8 @@
+package single.console.chat;
+
+public class ConsoleChatServer {
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,26 @@
+package single.console.chat;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ConsoleChatClient {
+	public static void main(String[] args) {
+		Socket socket = null;
+		
+		try {
+			socket = new Socket("70.12.115.55",12345);
+			System.out.println("서버접속완료...");
+			
+			while(true) {
+				
+				while(true) {
+					new Thread(new ServerSenderThread(socket)).start();
+					new Thread(new ServerReceiveThread(socket)).start();
+				}
+			}
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,41 @@
+package network;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+// 바이너리 데이터를 읽고 쓰지 않는 경우 - 문자열
+//주로 사용(성능면에서 효율적!)
+		// input - BufferedReader
+public class MyNetServer04 {
+	public static void main(String[] args) {
+		Socket client = null;
+		// 주로 사용(성능면에서 효율적!)
+		// input - BufferedReader
+		BufferedReader in = null;
+		// output - PrintWriter
+		PrintWriter out = null;
+		
+		try {
+			ServerSocket server = new ServerSocket(12345);
+			System.out.println("서버접속완료....");
+			InetAddress clientInfo = client.getInetAddress();
+			System.out.println("접속한 클라이언트: "+clientInfo.getHostAddress());
+			while(true) {
+				client = server.accept();
+				in = new BufferedReader(
+						new InputStreamReader(
+								client.getInputStream()));
+				out = new PrintWriter(client.getOutputStream());
+				
+				
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

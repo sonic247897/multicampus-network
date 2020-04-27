@@ -1,0 +1,10 @@
+package single.console.chat;
+
+import java.net.Socket;
+
+public class ConsoleChatServer {
+	public static void main(String[] args) {
+		Socket client = null;
+	}
+
+}

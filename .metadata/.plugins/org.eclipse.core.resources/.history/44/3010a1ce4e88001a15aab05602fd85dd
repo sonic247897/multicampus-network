@@ -1,0 +1,29 @@
+package single.console.chat;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+
+public class ServerReceiveThread implements Runnable {
+	Socket client = null;
+	BufferedReader in = null;
+	
+	public ServerReceiveThread(Socket client) {
+		this.client = client;
+	}
+
+	@Override
+	public void run() {
+		try {
+			in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+			String resMsg = "";
+			while(true) {
+				resMsg = in.readLine();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

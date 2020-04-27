@@ -1,0 +1,9 @@
+package basic;
+
+// InetAddress - IP를 표현하기 위한 객체
+public class InetAddressTest {
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package network;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class MyNetClient02 {
+	public static void main(String[] args) {
+		// 사내 IP사용 중일 때: 같은 네트워크 망에 묶여있어야 통신할 수 있다.(안드로이드도 마찬가지)
+		// 서버와 통신할 수 있는 소켓객체를 생성
+		// host: cmd > ipconfig의 IP주소
+		Socket socket;
+		try {
+			// 강사님 IP주소
+			socket = new Socket("70.12.115.50", 12345);
+			System.out.println("서버접속완료..."+socket);
+		} catch (UnknownHostException e) { 
+			// UnknownHostException은 IOException의 하위라서 IOException catch문 하나로도 
+			// 처리 가능하다.
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+	}
+	
+	// byte단위 입출력의 최상위 스트림- 이미지도 주고받기 때문
+	// 안드로이드  - 
+	// 1. HTTP: 한 번 요청이 가서 응답이 오면 끊어진다.
+	// 	(카톡같은거 불가능- 서버에서 연결을 지속해서 수신한 데이터를 모두에게 뿌려줌)
+	//	보완기술: HTTP에서 웹소켓 기술 사용하기
+	// 2. TCP: 
+}

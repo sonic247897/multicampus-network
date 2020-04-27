@@ -1,0 +1,11 @@
+package single.console.chat;
+
+import java.io.PrintWriter;
+
+public class ServerSenderThread implements Runnable{
+	PrintWriter 
+	@Override
+	public void run() {
+		
+	}
+}

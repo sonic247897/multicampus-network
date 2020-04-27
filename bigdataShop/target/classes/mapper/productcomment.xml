@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.multi.bigdataShop.productcomment">
+	<select id="list" resultType="comment" parameterType="String">
+		select * from pro_comment
+		where prd_no=#{prd_no}
+	</select>
+	
+	<insert id="insert" parameterType="comment">
+		insert into pro_comment
+		values(#{prd_no},#{mem_id},#{pro_comment},sysdate)
+	</insert>
+	
+	<select id="result" resultType="commentResult">
+		<![CDATA[
+			select c.*
+			from (select *
+					from comment_result
+					order by count desc) c
+			where rownum<=10
+		]]>
+	</select>
+</mapper>
+
+
+

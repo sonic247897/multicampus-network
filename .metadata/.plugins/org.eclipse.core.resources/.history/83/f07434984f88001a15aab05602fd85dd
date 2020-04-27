@@ -1,0 +1,6 @@
+package single.console.chat;
+
+public class ClientSenderThread implements Runnable{
+	
+
+}

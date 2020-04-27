@@ -1,0 +1,16 @@
+package single.console.chat;
+
+import java.io.PrintWriter;
+
+public class ServerSenderThread implements Runnable{
+	Socket client = null;
+	PrintWriter out = null;
+	
+	@Override
+	public void run() {
+		
+		while(true) {
+			
+		}
+	}
+}

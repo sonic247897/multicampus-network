@@ -1,0 +1,34 @@
+package network;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class MyNetServer03 {
+	public static void main(String[] args) {
+		Socket client = null;
+		InputStream is = null;
+		DataInputStream dis = null;
+		OutputStream os = null;
+		DataOutputStream dos = null;
+		
+		try {
+			ServerSocket server = new ServerSocket(12345);
+			System.out.println("서버준비완료");
+			while(true) {
+				client = server.accept();
+				clientInfo = client.getInetAddress();
+			}
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

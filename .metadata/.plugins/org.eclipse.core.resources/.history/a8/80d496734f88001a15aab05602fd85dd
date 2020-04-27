@@ -1,0 +1,10 @@
+package single.console.chat;
+
+public class ClientReceiveThread implements Runnable{
+
+	@Override
+	public void run() {
+		
+	}
+
+}

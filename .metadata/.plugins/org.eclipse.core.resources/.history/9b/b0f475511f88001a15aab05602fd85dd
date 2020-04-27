@@ -1,0 +1,15 @@
+package network;
+
+import java.net.ServerSocket;
+
+public class MyNetServer01 {
+	public static void main(String[] args) {
+		// 클라이언트와 통신할 수 있도록 준비
+		// (port: 사용 안하는 포트 사용)
+		
+		// 네트워크 - 패킷(바이트) 단위로 송수신하므로 IOException
+		ServerSocket server = new ServerSocket(12345);
+
+	}
+
+}
