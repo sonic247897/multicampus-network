@@ -1,8 +1,0 @@
-package network;
-
-public class MyNetClient03 {
-	public static void main(String[] args) {
-
-	}
-
-}
