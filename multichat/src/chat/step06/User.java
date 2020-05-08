@@ -28,6 +28,10 @@ public class User extends Thread{
 	
 	String nickname;
 	
+	public User() {
+		
+	}
+	
 	// 서버가 접속한 클라이언트의 정보를 User객체로 만들 때 접속한 User의 소켓객체와 서버뷰를 전달
 	public User(Socket client, ChatServerView serverView) {
 		super();

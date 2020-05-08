@@ -26,4 +26,11 @@
 <fullyQualifiedTypeName name="chat.step06.User"/>
 <fullyQualifiedTypeName name="chat.step06.ChatServerView"/>
 <fullyQualifiedTypeName name="chat.step06.ClientChatListener"/>
+<fullyQualifiedTypeName name="chat.step07.User"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="java.lang.StrictMath"/>
+<fullyQualifiedTypeName name="javax.swing.JScrollBar"/>
+<fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+<fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>

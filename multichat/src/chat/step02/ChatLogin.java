@@ -58,7 +58,7 @@ public class ChatLogin extends JFrame {
 		// 레이아웃에 붙임
 		contentPane.add(lblNewLabel);
 		
-		// 콤보박스
+		// 콤보박스 - ip배열이 메뉴
 		cboServer = new JComboBox(ip);
 		cboServer.setBounds(37, 141, 238, 30);
 		contentPane.add(cboServer);
